@@ -42,5 +42,10 @@ public class Main {
                 .forEach((k, v) -> IO.println(k + " " + v));
 
         viajeRepo.findWithIncidencia().forEach(System.out::println);
+
+        Viajero v1 = viajeroRepo.findById(1L).orElse(null);
+        IO.println(v1.getViajes());
+
+
     }
 }

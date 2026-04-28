@@ -23,4 +23,6 @@ public class ViajeRepository extends JpaRepository<Viaje,Long>{
         }
     }
 
+
+
 }
