@@ -43,9 +43,8 @@ public class Main {
 
         viajeRepo.findWithIncidencia().forEach(System.out::println);
 
-        Viajero v1 = viajeroRepo.findById(1L).orElse(null);
-        IO.println(v1.getViajes());
+        viajeroRepo.findViajesByViajeroIdAndPrecioGreaterThan(1L, 1.5).forEach(System.out::println);
 
-
+        viajeroRepo.findTotalViajero().forEach(System.out::println);
     }
 }
