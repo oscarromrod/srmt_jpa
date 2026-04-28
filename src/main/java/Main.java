@@ -40,5 +40,7 @@ public class Main {
         viajeRepo.findAll().stream()
                 .collect(Collectors.groupingBy(Viaje::getLineaTransporte, Collectors.counting()))
                 .forEach((k, v) -> IO.println(k + " " + v));
+
+        viajeRepo.findWithIncidencia().forEach(System.out::println);
     }
 }
