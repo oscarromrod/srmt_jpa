@@ -46,5 +46,7 @@ public class Main {
         viajeroRepo.findViajesByViajeroIdAndPrecioGreaterThan(1L, 1.5).forEach(System.out::println);
 
         viajeroRepo.findTotalViajero().forEach(System.out::println);
+
+        IO.println(viajeroRepo.findTop1ByPuntosDesc());
     }
 }

@@ -43,6 +43,17 @@ public class ViajeroRepository extends JpaRepository<Viajero, Long> {
         } finally {
             em.close();
         }
+    }
 
+    //Viajero con mas puntos
+    public Viajero findTop1ByPuntosDesc(){
+        EntityManager em = JpaUtil.createEntityManager();
+        try{
+            return em.createQuery("FROM Viajero vj ORDER BY vj.saldoPuntos DESC", Viajero.class)
+                    .getResultList().stream()
+                    .findFirst().orElse(null);
+        } finally {
+            em.close();
+        }
     }
 }
