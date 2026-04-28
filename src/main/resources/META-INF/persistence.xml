@@ -9,9 +9,8 @@
         <!-- Hibernate como proveedor JPA -->
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
         <!-- Entidades mapeadas -->
-<!--        <class>com.eventos.modelo.Recinto</class>-->
-<!--        <class>com.eventos.modelo.Evento</class>-->
-<!--        <class>com.eventos.modelo.Asistente</class>-->
+        <class>entities.Viajero</class>
+
         <properties>
             <!-- Conexión -->
             <property name="jakarta.persistence.jdbc.driver"

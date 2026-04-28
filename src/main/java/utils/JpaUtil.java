@@ -4,7 +4,7 @@ import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;
 
-public class JpaUtils {
+public class JpaUtil {
 
     // Nombre debe coincidir con el atributo "name" del persistence-unit
     private static final EntityManagerFactory emf;
